@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Taksohinna kalkulaator</title>
+	<meta charset="UTF-8">
+	<script type="text/javascript">
+
+		var img1 = new Image();
+		img1.src  = "paev.png";
+
+		var img2 = new Image();
+		img2.src  = "oo.png";
+
+		function joonista(seisund) {
+			var km = document.getElementById('kilomeetrid').value;
+			var g = document.getElementById("tahvel").getContext("2d");
+
+			g.clearRect(0, 0, 300, 200);
+
+			if (seisund == "valge"){
+				g.drawImage(img1, 0, 0);
+				document.getElementById('istumistasu').innerHTML = 2;
+				document.getElementById('kmhind').innerHTML = 0.5;
+				document.getElementById('soidutasu').innerHTML = 2 + 0.5 * km;
+
+			} 
+			if (seisund == "pime") {
+				g.drawImage(img2, 0, 0);
+				document.getElementById('istumistasu').innerHTML = 3;
+				document.getElementById('kmhind').innerHTML = 0.8;
+				document.getElementById('soidutasu').innerHTML = 3 + 0.8 * km;				
+			}
+
+		}
+	</script> 
+</head>
+ <body onload="">
+	<h1>Taksohinna kalkulaator</h1>
+	Sisesta kilomeetrid, vali seisund ja arvuta:
+	<input type="text" id="kilomeetrid" placeholder="km" /><br />
+	<input type="button" value="Päev" onclick="joonista('valge')" />
+	<input type="button" value="Öö" onclick="joonista('pime')" /><br />
+
+	<p>Sisseistumistasu <span id="istumistasu">0</span>€ ja kilomeetrihind <span id="kmhind">0</span>€</p>
+	<p>Sõiduhind =  <span id="soidutasu">0</span>€</p>
+	<canvas id="tahvel" width="300" height="200" ></canvas>
+ </body>
+
+</html>

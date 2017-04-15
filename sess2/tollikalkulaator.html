@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+ <head>
+	 <title>Kalkulaator</title>
+	 <script>
+		function arvuta() {
+			var tollidearv = parseFloat(document.getElementById("kast1").value);
+			document.getElementById("vastus").innerHTML = tollidearv * 2.54;
+		}
+	 </script>
+ </head>
+ <body>
+	<h1>Arvutamine</h1>
+	Tollid: <input type="text" id="kast1" /><input type="button" value="Sentimeetriteks" onClick="arvuta();" />
+	<div id="vastus"></div>
+ </body>
+</html>

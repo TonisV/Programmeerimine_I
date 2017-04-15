@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Kalkulaator EUR - USD</title>
+	<meta charset="UTF-8" />
+
+	<script type="text/javascript">
+	function arvuta(){
+		var valuuta = parseFloat(document.getElementById("raha").value);
+		var kurss   = 1.07;
+		var komtasu = 0.02;
+		var raha    = valuuta * 1.07
+		var kokku   = Math.abs(raha - raha * komtasu);
+
+		document.getElementById("vastus").innerHTML = kokku + ' USD (sisaldab komisjonitasu)';
+	}
+	</script>
+
+</head>
+
+<body>
+	<h1>Kalkulaator EUR - USD</h1>
+	EUR: <input type="text" id="raha" /><input type="button" value="OK" onclick="arvuta();" />
+	<div id="vastus"></div>
+</body>
+</html>
