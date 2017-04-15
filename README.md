@@ -1,2 +1,2 @@
-# Programmeerimine_I
+# Programmeerimine I
 HKI5002 Programmeerimine I - praktikumid
