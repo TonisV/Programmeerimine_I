@@ -1,0 +1,12 @@
+.light {
+    padding: 20px;
+    border-radius: 100%;
+    border: 1px solid #555;
+    width: 20px;
+    margin: 20px 0 10px 0;
+    display: block;
+}
+
+.on {
+    background-color: yellow;
+}
