@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mitu parameetrit päringus</title>
+</head>
+<body>
+    <h1>Mitu parameetrit päringus</h1>
+
+    <div id="layer1"></div>
+
+    Eesnimi: <input type="text" id="firstname" /><br />
+    Perekonnanimi: <input type="text" id="lastname" /><br />
+
+    <input type="button" value="Say hello" onclick="readData('hello')" />
+    <br />
+    <input type="button" value="Get time" onclick="readData('time')" />
+    <br />
+    Uudised
+    <select id="newsId" onchange="readData('news')">
+        <option value="0"> - </option>
+        <option value="1"> 1 </option>
+        <option value="2"> 2 </option>
+        <option value="3"> 3 </option>
+    </select>
+
+    <script src="app.js"></script>
+</body>
+</html>
